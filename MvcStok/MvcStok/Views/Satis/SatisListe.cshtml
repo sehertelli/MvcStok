@@ -1,0 +1,22 @@
+﻿@using MvcStok.Models.Entity
+@model List<TBLSATISLAR>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün</th>
+        <th>Müşteri</th>
+        <th>Adet</th>
+        <th>Fiyat</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.SATISID</td>
+            <td>@x.TBLURUNLER.URUNAD</td>
+            <td>@x.TBLMUSTERILER.MUSTERIAD @x.TBLMUSTERILER.MUSTERISOYAD</td>
+            <td>@x.ADET</td>
+            <td>@x.FIYAT</td>
+        </tr>
+    }
+</table>
